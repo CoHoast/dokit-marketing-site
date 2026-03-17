@@ -236,6 +236,7 @@
       </div>
       
       <div class="grid md:grid-cols-2 gap-6">
+        <!-- Claims Processing -->
         <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 bg-gradient-to-br from-[#3B82F6] to-[#6366F1] rounded-xl flex items-center justify-center flex-shrink-0">
@@ -253,108 +254,79 @@
           </div>
         </div>
         
+        <!-- Claims Repricing -->
         <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Prior Authorization</h3>
-              <p class="text-[#64748B] mb-4">Extract key information from prior auth requests. Auto-validate against payer requirements and flag missing documentation.</p>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Claims Repricing</h3>
+              <p class="text-[#64748B] mb-4">Automatically reprice claims against Medicare rates, fee schedules, and contracted rates. Identify overcharges and calculate fair pricing.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Auto-validation</span>
-                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Missing Doc Alerts</span>
-                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Payer Rules</span>
+                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Medicare Rates</span>
+                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Fee Schedules</span>
+                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Fair Pricing</span>
               </div>
             </div>
           </div>
         </div>
         
+        <!-- AI Bill Negotiator -->
         <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">AI Bill Negotiator</h3>
+              <p class="text-[#64748B] mb-4">AI-powered bill analysis and negotiation. Extract charges, calculate fair prices, and generate professional offer letters to providers.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Bill Analysis</span>
+                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Offer Letters</span>
+                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Savings Tracking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Member Intake -->
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
             </div>
             <div>
               <h3 class="text-xl font-bold text-[#0F172A] mb-2">Member Intake</h3>
               <p class="text-[#64748B] mb-4">Process eligibility applications, enrollment forms, and supporting documents. Risk scoring and auto-routing.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Applications</span>
-                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Eligibility Scoring</span>
-                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Auto-routing</span>
+                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Applications</span>
+                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Eligibility Scoring</span>
+                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Auto-routing</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Provider Bills</h3>
-              <p class="text-[#64748B] mb-4">Extract line items from provider invoices for accurate repricing. Flag anomalies and compare against contracted rates.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Line-item Extraction</span>
-                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Rate Comparison</span>
-                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Anomaly Detection</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
+        <!-- Document Intake & Processing -->
         <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Document Intake & Extraction</h3>
-              <p class="text-[#64748B] mb-4">Universal document processing for any file type. AI-powered OCR, classification, and structured data extraction from PDFs, images, and scans.</p>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Document Intake & Processing</h3>
+              <p class="text-[#64748B] mb-4">Convert unstructured documents — PDFs, JPEGs, faxes, scans — into standardized industry formats. AI-powered OCR and classification.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-cyan-50 rounded-lg text-xs font-medium text-cyan-600">Any Document Type</span>
+                <span class="px-3 py-1 bg-cyan-50 rounded-lg text-xs font-medium text-cyan-600">PDF & Images</span>
                 <span class="px-3 py-1 bg-cyan-50 rounded-lg text-xs font-medium text-cyan-600">AI OCR</span>
-                <span class="px-3 py-1 bg-cyan-50 rounded-lg text-xs font-medium text-cyan-600">Auto-Classification</span>
+                <span class="px-3 py-1 bg-cyan-50 rounded-lg text-xs font-medium text-cyan-600">Standard Formats</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Contract Analysis</h3>
-              <p class="text-[#64748B] mb-4">Extract key terms, obligations, and dates from contracts. Identify risk clauses, compare against templates, and flag deviations.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-rose-50 rounded-lg text-xs font-medium text-rose-600">Term Extraction</span>
-                <span class="px-3 py-1 bg-rose-50 rounded-lg text-xs font-medium text-rose-600">Risk Detection</span>
-                <span class="px-3 py-1 bg-rose-50 rounded-lg text-xs font-medium text-rose-600">Clause Comparison</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Policy Underwriting</h3>
-              <p class="text-[#64748B] mb-4">Process insurance applications, medical questionnaires, and supporting documents. Risk scoring and automated decision support.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-indigo-50 rounded-lg text-xs font-medium text-indigo-600">Applications</span>
-                <span class="px-3 py-1 bg-indigo-50 rounded-lg text-xs font-medium text-indigo-600">Risk Scoring</span>
-                <span class="px-3 py-1 bg-indigo-50 rounded-lg text-xs font-medium text-indigo-600">Decision Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
+        <!-- EOB & Remittance -->
         <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -372,6 +344,25 @@
           </div>
         </div>
         
+        <!-- Contract Analysis -->
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Contract Analysis</h3>
+              <p class="text-[#64748B] mb-4">Extract key terms, obligations, and dates from contracts. Identify risk clauses, compare against templates, and flag deviations.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-rose-50 rounded-lg text-xs font-medium text-rose-600">Term Extraction</span>
+                <span class="px-3 py-1 bg-rose-50 rounded-lg text-xs font-medium text-rose-600">Risk Detection</span>
+                <span class="px-3 py-1 bg-rose-50 rounded-lg text-xs font-medium text-rose-600">Clause Comparison</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Legal Discovery -->
         <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl flex items-center justify-center flex-shrink-0">
