@@ -3,254 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOKit — AI-Powered Document Intake</title>
+  <title>DOKit — AI-Powered Document Intelligence</title>
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            accent: {
+              blue: '#3B82F6',
+              indigo: '#6366F1',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
     body { font-family: 'Inter', sans-serif; }
     .gradient-orb {
-      background: radial-gradient(circle at 30% 40%, rgba(255, 150, 180, 0.9) 0%, transparent 40%),
-                  radial-gradient(circle at 70% 50%, rgba(120, 180, 255, 0.9) 0%, transparent 40%),
-                  radial-gradient(circle at 50% 60%, rgba(180, 160, 255, 0.95) 0%, transparent 45%),
-                  radial-gradient(circle at 60% 30%, rgba(140, 230, 240, 0.8) 0%, transparent 35%);
-      filter: blur(30px);
+      background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.4) 0%, transparent 40%),
+                  radial-gradient(circle at 70% 50%, rgba(99, 102, 241, 0.4) 0%, transparent 40%),
+                  radial-gradient(circle at 50% 60%, rgba(59, 130, 246, 0.3) 0%, transparent 45%);
+      filter: blur(40px);
       animation: float 8s ease-in-out infinite;
     }
     @keyframes float {
       0%, 100% { transform: translateY(0) scale(1); }
       50% { transform: translateY(-20px) scale(1.05); }
     }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900">
+<body class="min-h-screen bg-[#F8FAFC] text-[#0F172A]">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-xl border-b border-slate-100/50">
+  <!-- Navigation - Dark Navy -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0F172A] border-b border-[#334155]">
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-center justify-between h-16">
         <a href="#" class="flex items-center">
-          <img src="/assets/dokit-logo.png" alt="DOKit" class="h-8">
+          <img src="/assets/dokit-logo-white.png" alt="DOKit" class="h-7">
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="#features" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Features</a>
-          <a href="#modules" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Modules</a>
-          <a href="#security" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Security</a>
+          <a href="#features" class="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
+          <a href="#modules" class="text-sm text-slate-400 hover:text-white transition-colors">Modules</a>
+          <a href="#security" class="text-sm text-slate-400 hover:text-white transition-colors">Security</a>
+          <a href="#contact" class="text-sm text-slate-400 hover:text-white transition-colors">Contact</a>
         </div>
         <div class="flex items-center gap-4">
-          <a href="#contact" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium rounded-full transition-all">Get Started</a>
+          <a href="#contact" class="px-5 py-2 bg-[#3B82F6] hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-all">
+            Get Started
+          </a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative pt-72 pb-20 overflow-hidden">
-    <!-- Gradient Orb (smaller, more vibrant) -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] md:w-[550px] md:h-[550px]">
+  <section class="relative pt-40 pb-20 overflow-hidden">
+    <!-- Gradient Orb -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px]">
       <div class="gradient-orb w-full h-full rounded-full"></div>
     </div>
     
-    <div class="relative max-w-3xl mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 mb-6">
-        AI-powered document intake
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6">
+        <span class="w-2 h-2 bg-[#3B82F6] rounded-full animate-pulse"></span>
+        <span class="text-sm font-medium text-[#3B82F6]">Now with GPT-4 Powered Extraction</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] mb-6">
+        AI-powered document<br/>intelligence platform
       </h1>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-        Streamline your document workflow with AI. DOKit intelligently extracts data from any document, making it easier to understand and act on your information.
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto mb-8 leading-relaxed">
+        Extract, classify, and process any document in seconds. DOKit transforms unstructured data into actionable insights for healthcare, legal, and insurance organizations.
       </p>
-      <a href="#contact" class="inline-block px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-full transition-all shadow-lg shadow-slate-900/20">
-        Get Started
-      </a>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <a href="#contact" class="px-8 py-3.5 bg-[#3B82F6] hover:bg-blue-600 text-white font-medium rounded-lg transition-all shadow-lg shadow-blue-500/25">
+          Start Free Trial
+        </a>
+        <a href="#modules" class="px-8 py-3.5 bg-white hover:bg-slate-50 text-[#0F172A] font-medium rounded-lg border border-[#E2E8F0] transition-all">
+          See How It Works
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Dashboard Preview -->
-  <section class="pb-16 pt-4 hidden md:block">
+  <section class="pb-20 pt-8 hidden md:block">
     <div class="max-w-5xl mx-auto px-6">
       <div class="relative">
-        <!-- Subtle glow effect -->
-        <div class="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-pink-500/10 to-cyan-500/10 rounded-2xl blur-2xl scale-95"></div>
-        
-        <!-- Dashboard screenshot -->
-        <div class="relative rounded-xl shadow-2xl shadow-slate-900/20 overflow-hidden border border-slate-200/50">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-blue-500/10 rounded-2xl blur-2xl scale-95"></div>
+        <div class="relative rounded-xl shadow-2xl shadow-slate-900/10 overflow-hidden border border-[#E2E8F0]">
           <img src="/dashboard-screenshot.png" alt="DOKit Dashboard" class="w-full h-auto" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Three Feature Boxes -->
-  <section class="py-16 px-6">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-      <!-- Box 1: Seamless Extraction -->
-      <div class="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-        <div class="h-32 mb-6 flex items-center justify-center">
-          <div class="relative">
-            <div class="w-20 h-24 bg-white rounded-lg shadow-md border border-slate-200 flex items-center justify-center">
-              <div class="space-y-1.5">
-                <div class="w-12 h-1.5 bg-slate-200 rounded"></div>
-                <div class="w-10 h-1.5 bg-slate-200 rounded"></div>
-                <div class="w-14 h-1.5 bg-slate-200 rounded"></div>
-                <div class="w-8 h-1.5 bg-slate-200 rounded"></div>
-              </div>
-            </div>
-            <div class="absolute -right-3 -bottom-2 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
-              <svg width="16" height="16" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            </div>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold text-slate-900 mb-3">Seamless Extraction</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">AI-driven extraction quickly identifies and extracts key data from documents, reducing manual effort and errors.</p>
-      </div>
-
-      <!-- Box 2: Easy Integration -->
-      <div class="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-        <div class="h-32 mb-6 flex items-center justify-center">
-          <div class="relative">
-            <div class="w-24 h-16 bg-white rounded-lg shadow-md border border-slate-200 p-2">
-              <div class="w-full h-2 bg-blue-100 rounded mb-1.5"></div>
-              <div class="flex gap-1">
-                <div class="w-6 h-6 bg-blue-50 rounded border border-blue-200"></div>
-                <div class="w-6 h-6 bg-violet-50 rounded border border-violet-200"></div>
-                <div class="w-6 h-6 bg-emerald-50 rounded border border-emerald-200"></div>
-              </div>
-            </div>
-            <div class="absolute -left-4 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-slate-300"></div>
-            <div class="absolute -right-4 top-1/2 -translate-y-1/2 w-4 h-0.5 bg-slate-300"></div>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold text-slate-900 mb-3">Easy Integration</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Plug DOKit into your existing systems with simple and secure API integrations, seamlessly maximizing your workflow efficiency.</p>
-      </div>
-
-      <!-- Box 3: Automated Insights -->
-      <div class="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-        <div class="h-32 mb-6 flex items-center justify-center">
-          <div class="grid grid-cols-2 gap-2">
-            <div class="w-10 h-10 bg-white rounded-lg shadow-sm border border-slate-200 flex items-center justify-center text-violet-500">λ</div>
-            <div class="w-10 h-10 bg-white rounded-lg shadow-sm border border-slate-200 flex items-center justify-center text-slate-400"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg></div>
-            <div class="w-10 h-10 bg-white rounded-lg shadow-sm border border-slate-200 flex items-center justify-center text-slate-400">✦</div>
-            <div class="w-10 h-10 bg-white rounded-lg shadow-sm border border-slate-200 flex items-center justify-center text-blue-500"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></div>
-          </div>
-        </div>
-        <h3 class="text-xl font-semibold text-slate-900 mb-3">Automated Insights</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Utilize advanced AI to analyze your data, providing actionable insights and recommendations to drive better decisions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Badges -->
-  <section class="py-12 border-y border-slate-100">
+  <!-- Stats Bar -->
+  <section class="py-12 bg-[#0F172A]">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-center justify-center gap-6 md:gap-12 flex-wrap">
-        <div class="flex items-center gap-2 text-slate-600">
-          <svg width="20" height="20" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          <span class="text-sm font-medium">HIPAA Compliant</span>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">99.2%</div>
+          <div class="text-sm text-slate-400">Extraction Accuracy</div>
         </div>
-        <div class="flex items-center gap-2 text-slate-600">
-          <svg width="20" height="20" class="text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          <span class="text-sm font-medium">10-15s Processing</span>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">&lt;5s</div>
+          <div class="text-sm text-slate-400">Avg Processing Time</div>
         </div>
-        <div class="flex items-center gap-2 text-slate-600">
-          <svg width="20" height="20" class="text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <span class="text-sm font-medium">98%+ Accuracy</span>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">2M+</div>
+          <div class="text-sm text-slate-400">Documents Processed</div>
         </div>
-        <div class="flex items-center gap-2 text-slate-600">
-          <svg width="20" height="20" class="text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-          <span class="text-sm font-medium">GPT-4 Powered</span>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-white mb-1">99.9%</div>
+          <div class="text-sm text-slate-400">Uptime SLA</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Features Grid -->
   <section id="features" class="py-24">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <p class="text-sm font-medium text-indigo-600 mb-3">PLATFORM FEATURES</p>
-        <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">Everything you need to automate document workflows</h2>
-        <p class="text-slate-500">Built for organizations in healthcare, legal, lending, and insurance that need speed, accuracy, and compliance.</p>
+        <p class="text-sm font-semibold text-[#3B82F6] mb-3 tracking-wide">PLATFORM FEATURES</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">Everything you need to automate document workflows</h2>
+        <p class="text-[#64748B]">Built for organizations in healthcare, legal, lending, and insurance that need speed, accuracy, and compliance.</p>
       </div>
       
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass-card rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" class="text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg hover:border-[#3B82F6]/30 transition-all">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+            <svg width="24" height="24" class="text-[#3B82F6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
           </div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Multi-Channel Intake</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Receive documents via email, upload, REST API, or SFTP. All channels feed into the same intelligent processing pipeline.</p>
+          <h3 class="text-lg font-semibold text-[#0F172A] mb-2">Multi-Channel Intake</h3>
+          <p class="text-[#64748B] text-sm leading-relaxed">Receive documents via email, upload, REST API, or SFTP. All channels feed into the same intelligent pipeline.</p>
         </div>
         
-        <div class="glass-card rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-12 h-12 bg-gradient-to-br from-violet-100 to-purple-100 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" class="text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg hover:border-[#3B82F6]/30 transition-all">
+          <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-5">
+            <svg width="24" height="24" class="text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">AI Classification</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Automatically identify document types — claims, invoices, contracts, applications, and more. No manual sorting required.</p>
+          <h3 class="text-lg font-semibold text-[#0F172A] mb-2">AI Classification</h3>
+          <p class="text-[#64748B] text-sm leading-relaxed">Automatically identify document types — claims, invoices, contracts, applications. No manual sorting required.</p>
         </div>
         
-        <div class="glass-card rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-12 h-12 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" class="text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg hover:border-[#3B82F6]/30 transition-all">
+          <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+            <svg width="24" height="24" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Intelligent Extraction</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">GPT-4 powered extraction pulls structured data from unstructured documents with 98%+ accuracy.</p>
+          <h3 class="text-lg font-semibold text-[#0F172A] mb-2">Intelligent Extraction</h3>
+          <p class="text-[#64748B] text-sm leading-relaxed">GPT-4 powered extraction pulls structured data from unstructured documents with 99%+ accuracy.</p>
         </div>
         
-        <div class="glass-card rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" class="text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg hover:border-[#3B82F6]/30 transition-all">
+          <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
+            <svg width="24" height="24" class="text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Visual Workflow Builder</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Create custom processing rules with drag-and-drop. Auto-approve, flag for review, or route based on any criteria.</p>
+          <h3 class="text-lg font-semibold text-[#0F172A] mb-2">Visual Workflow Builder</h3>
+          <p class="text-[#64748B] text-sm leading-relaxed">Create custom processing rules with drag-and-drop. Auto-approve, flag for review, or route based on any criteria.</p>
         </div>
         
-        <div class="glass-card rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg hover:border-[#3B82F6]/30 transition-all">
+          <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center mb-5">
+            <svg width="24" height="24" class="text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
           </div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Real-Time Analytics</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Track processing volume, success rates, turnaround times, and bottlenecks. Export reports or connect to your BI tools.</p>
+          <h3 class="text-lg font-semibold text-[#0F172A] mb-2">Real-Time Analytics</h3>
+          <p class="text-[#64748B] text-sm leading-relaxed">Track processing volume, success rates, turnaround times, and bottlenecks. Export reports or connect to BI tools.</p>
         </div>
         
-        <div class="glass-card rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-12 h-12 bg-gradient-to-br from-cyan-100 to-sky-100 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" class="text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg hover:border-[#3B82F6]/30 transition-all">
+          <div class="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center mb-5">
+            <svg width="24" height="24" class="text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
           </div>
-          <h3 class="text-lg font-semibold text-slate-900 mb-2">Seamless Integrations</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Webhooks, REST API, and pre-built connectors. Export in JSON, CSV, or X12 EDI formats.</p>
+          <h3 class="text-lg font-semibold text-[#0F172A] mb-2">Seamless Integrations</h3>
+          <p class="text-[#64748B] text-sm leading-relaxed">Webhooks, REST API, and pre-built connectors. Export in JSON, CSV, or X12 EDI formats.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Problem/Solution Section -->
-  <section class="py-20">
+  <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8 items-stretch">
-        <div class="bg-white rounded-2xl p-8 border border-slate-200">
-          <p class="text-sm font-medium text-rose-600 mb-4">THE PROBLEM</p>
-          <h2 class="text-2xl font-semibold text-slate-900 mb-6">Manual document processing is killing your efficiency</h2>
+        <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-[#E2E8F0]">
+          <p class="text-sm font-semibold text-rose-600 mb-4 tracking-wide">THE PROBLEM</p>
+          <h2 class="text-2xl font-bold text-[#0F172A] mb-6">Manual document processing is killing your efficiency</h2>
           <div class="space-y-4">
-            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-medium">✕</span></div><span class="text-slate-600">Staff spend hours manually entering data from faxes and emails</span></div>
-            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-medium">✕</span></div><span class="text-slate-600">Document reviews take days instead of minutes</span></div>
-            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-medium">✕</span></div><span class="text-slate-600">Claims get rejected due to data entry errors</span></div>
-            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-medium">✕</span></div><span class="text-slate-600">Intake backlogs grow while patients wait</span></div>
+            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-bold">✕</span></div><span class="text-[#64748B]">Staff spend hours manually entering data from faxes and emails</span></div>
+            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-bold">✕</span></div><span class="text-[#64748B]">Document reviews take days instead of minutes</span></div>
+            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-bold">✕</span></div><span class="text-[#64748B]">Claims get rejected due to data entry errors</span></div>
+            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-rose-600 text-sm font-bold">✕</span></div><span class="text-[#64748B]">Intake backlogs grow while patients wait</span></div>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
-          <p class="text-sm font-medium text-emerald-400 mb-4">THE SOLUTION</p>
-          <h2 class="text-2xl font-semibold mb-6">DOKit automates the entire workflow</h2>
+        <div class="bg-[#0F172A] rounded-2xl p-8 text-white">
+          <p class="text-sm font-semibold text-[#3B82F6] mb-4 tracking-wide">THE SOLUTION</p>
+          <h2 class="text-2xl font-bold mb-6">DOKit automates the entire workflow</h2>
           <div class="space-y-4">
             <div class="flex items-start gap-3"><div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="14" height="14" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-slate-300">AI extracts data from any document in seconds</span></div>
-            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="14" height="14" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-slate-300">Documents processed automatically with 98%+ accuracy</span></div>
+            <div class="flex items-start gap-3"><div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="14" height="14" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-slate-300">Documents processed automatically with 99%+ accuracy</span></div>
             <div class="flex items-start gap-3"><div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="14" height="14" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-slate-300">Claims validated before submission — fewer rejections</span></div>
             <div class="flex items-start gap-3"><div class="w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="14" height="14" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><span class="text-slate-300">Real-time processing eliminates backlogs</span></div>
           </div>
@@ -260,78 +222,78 @@
   </section>
 
   <!-- Modules Section -->
-  <section id="modules" class="py-24 bg-slate-50/50">
+  <section id="modules" class="py-24 bg-[#F8FAFC]">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <p class="text-sm font-medium text-indigo-600 mb-3">PROCESSING MODULES</p>
-        <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">Purpose-built for document-heavy industries</h2>
-        <p class="text-slate-500">Choose the modules you need. Each one is optimized for specific document types and workflows.</p>
+        <p class="text-sm font-semibold text-[#3B82F6] mb-3 tracking-wide">PROCESSING MODULES</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">Purpose-built for document-heavy industries</h2>
+        <p class="text-[#64748B]">Choose the modules you need. Each one is optimized for specific document types and workflows.</p>
       </div>
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#3B82F6] to-[#6366F1] rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-slate-900 mb-2">Claims Processing</h3>
-              <p class="text-slate-500 mb-4">CMS-1500 and UB-04 extraction with X12 837P/837I output. NPI validation, diagnosis code lookup, and charge verification included.</p>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Claims Processing</h3>
+              <p class="text-[#64748B] mb-4">CMS-1500 and UB-04 extraction with X12 837P/837I output. NPI validation, diagnosis code lookup, and charge verification.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">CMS-1500 & UB-04</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">X12 837 EDI</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">NPI validation</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-lg text-xs font-medium text-[#3B82F6]">CMS-1500 & UB-04</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-lg text-xs font-medium text-[#3B82F6]">X12 837 EDI</span>
+                <span class="px-3 py-1 bg-blue-50 rounded-lg text-xs font-medium text-[#3B82F6]">NPI Validation</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-slate-900 mb-2">Contract Analysis</h3>
-              <p class="text-slate-500 mb-4">Extract key terms, dates, and obligations from legal documents. Accelerate contract review from days to minutes.</p>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Prior Authorization</h3>
+              <p class="text-[#64748B] mb-4">Extract key information from prior auth requests. Auto-validate against payer requirements and flag missing documentation.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Term extraction</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Obligation tracking</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Risk flagging</span>
+                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Auto-validation</span>
+                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Missing Doc Alerts</span>
+                <span class="px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-600">Payer Rules</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-slate-900 mb-2">Member Intake</h3>
-              <p class="text-slate-500 mb-4">Process eligibility applications, enrollment forms, and supporting documents. Risk scoring and auto-routing based on your criteria.</p>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Member Intake</h3>
+              <p class="text-[#64748B] mb-4">Process eligibility applications, enrollment forms, and supporting documents. Risk scoring and auto-routing.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Application processing</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Eligibility scoring</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Auto-routing</span>
+                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Applications</span>
+                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Eligibility Scoring</span>
+                <span class="px-3 py-1 bg-violet-50 rounded-lg text-xs font-medium text-violet-600">Auto-routing</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+        <div class="bg-white rounded-xl p-8 border border-[#E2E8F0] hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
               <svg width="28" height="28" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-slate-900 mb-2">Provider Bills</h3>
-              <p class="text-slate-500 mb-4">Extract line items from provider invoices for accurate repricing. Flag anomalies and compare against contracted rates automatically.</p>
+              <h3 class="text-xl font-bold text-[#0F172A] mb-2">Provider Bills</h3>
+              <p class="text-[#64748B] mb-4">Extract line items from provider invoices for accurate repricing. Flag anomalies and compare against contracted rates.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Line-item extraction</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Rate comparison</span>
-                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">Anomaly detection</span>
+                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Line-item Extraction</span>
+                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Rate Comparison</span>
+                <span class="px-3 py-1 bg-amber-50 rounded-lg text-xs font-medium text-amber-600">Anomaly Detection</span>
               </div>
             </div>
           </div>
@@ -341,61 +303,61 @@
   </section>
 
   <!-- Security Section -->
-  <section id="security" class="py-24 bg-slate-50/50">
+  <section id="security" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-sm font-medium text-indigo-600 mb-3">SECURITY & COMPLIANCE</p>
-          <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 mb-6">Enterprise-grade security & compliance</h2>
-          <p class="text-slate-500 mb-8">DOKit is designed from the ground up for regulated industries. Your data is encrypted, isolated, and protected at every layer. HIPAA, SOC 2, and GDPR ready.</p>
+          <p class="text-sm font-semibold text-[#3B82F6] mb-3 tracking-wide">SECURITY & COMPLIANCE</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6">Enterprise-grade security & compliance</h2>
+          <p class="text-[#64748B] mb-8">DOKit is designed from the ground up for regulated industries. Your data is encrypted, isolated, and protected at every layer.</p>
           <div class="space-y-4">
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
                 <svg width="20" height="20" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
               </div>
-              <span class="text-slate-700">HIPAA compliant with signed BAAs</span>
+              <span class="text-[#0F172A] font-medium">HIPAA compliant with signed BAAs</span>
             </div>
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
                 <svg width="20" height="20" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
               </div>
-              <span class="text-slate-700">256-bit AES encryption at rest</span>
+              <span class="text-[#0F172A] font-medium">AES-256 encryption at rest & in transit</span>
             </div>
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
                 <svg width="20" height="20" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
               </div>
-              <span class="text-slate-700">Role-based access control (RBAC)</span>
+              <span class="text-[#0F172A] font-medium">Role-based access control (RBAC)</span>
             </div>
             <div class="flex items-center gap-4">
               <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
-                <svg width="20" height="20" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <svg width="20" height="20" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
               </div>
-              <span class="text-slate-700">Complete audit logging</span>
+              <span class="text-[#0F172A] font-medium">Complete audit logging</span>
             </div>
           </div>
         </div>
         <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 rounded-3xl blur-3xl"></div>
-          <div class="relative bg-white rounded-2xl p-8 border border-slate-200 shadow-xl">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl blur-3xl"></div>
+          <div class="relative bg-[#0F172A] rounded-2xl p-8 border border-[#334155]">
             <div class="flex items-center gap-3 mb-6">
-              <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-xl flex items-center justify-center">
+              <div class="w-12 h-12 bg-gradient-to-br from-[#3B82F6] to-[#6366F1] rounded-xl flex items-center justify-center">
                 <svg width="24" height="24" class="text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
               </div>
               <div>
-                <h3 class="font-semibold text-slate-900">Your data stays yours</h3>
-                <p class="text-sm text-slate-500">Complete tenant isolation</p>
+                <h3 class="font-bold text-white">Your data stays yours</h3>
+                <p class="text-sm text-slate-400">Complete tenant isolation</p>
               </div>
             </div>
-            <p class="text-slate-600 mb-6">Configurable data retention (7-30 days), and the ability to delete all data at any time. We process your documents and deliver the results — we don't keep them.</p>
+            <p class="text-slate-300 mb-6">Configurable data retention and the ability to delete all data at any time. We process your documents and deliver the results — we don't keep them.</p>
             <div class="grid grid-cols-2 gap-4">
-              <div class="bg-slate-50 rounded-xl p-4 text-center">
-                <div class="text-2xl font-bold text-slate-900">99.9%</div>
-                <div class="text-sm text-slate-500">Uptime SLA</div>
+              <div class="bg-[#1E293B] rounded-xl p-4 text-center">
+                <div class="text-2xl font-bold text-white">99.9%</div>
+                <div class="text-sm text-slate-400">Uptime SLA</div>
               </div>
-              <div class="bg-slate-50 rounded-xl p-4 text-center">
-                <div class="text-2xl font-bold text-slate-900">SOC 2</div>
-                <div class="text-sm text-slate-500">Type II Ready</div>
+              <div class="bg-[#1E293B] rounded-xl p-4 text-center">
+                <div class="text-2xl font-bold text-white">SOC 2</div>
+                <div class="text-sm text-slate-400">Type II Ready</div>
               </div>
             </div>
           </div>
@@ -407,65 +369,66 @@
   <!-- CTA Section -->
   <section id="contact" class="py-24">
     <div class="max-w-4xl mx-auto px-6">
-      <div class="relative overflow-hidden rounded-3xl bg-slate-900 p-12 text-center">
-        <!-- Gradient orbs -->
-        <div class="absolute top-0 left-1/4 w-64 h-64 bg-indigo-500/30 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-violet-500/30 rounded-full blur-3xl"></div>
+      <div class="relative overflow-hidden rounded-2xl bg-[#0F172A] p-12 text-center">
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-[#3B82F6]/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-[#6366F1]/30 rounded-full blur-3xl"></div>
         
         <div class="relative">
-          <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">Ready to automate your document workflows?</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to automate your document workflows?</h2>
           <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">Start your 14-day free trial today. No credit card required. Process your first document in under 5 minutes.</p>
           <div class="flex items-center justify-center gap-4 flex-wrap">
-            <a href="mailto:hello@dokit.ai" class="px-8 py-3.5 bg-white hover:bg-slate-100 text-slate-900 font-medium rounded-full transition-all">
+            <a href="mailto:hello@dokit.ai" class="px-8 py-3.5 bg-[#3B82F6] hover:bg-blue-600 text-white font-medium rounded-lg transition-all">
               Contact Sales
             </a>
-            <a href="#" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/20 transition-all">
+            <a href="#" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg border border-white/20 transition-all">
               Start Free Trial
             </a>
           </div>
-          <p class="text-slate-500 text-sm mt-6">Or email us at <a href="mailto:hello@dokit.ai" class="text-white underline">hello@dokit.ai</a></p>
+          <p class="text-slate-500 text-sm mt-6">Or email us at <a href="mailto:hello@dokit.ai" class="text-[#3B82F6] hover:underline">hello@dokit.ai</a></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-16 border-t border-slate-100">
+  <footer class="py-16 border-t border-[#E2E8F0] bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-12 mb-12">
         <div>
           <div class="flex items-center mb-4">
-            <img src="/assets/dokit-logo.png" alt="DOKit" class="h-8">
+            <div class="bg-[#0F172A] rounded-lg p-2">
+              <img src="/assets/dokit-logo-white.png" alt="DOKit" class="h-5">
+            </div>
           </div>
-          <p class="text-sm text-slate-500 mb-4">AI-powered document intake and analysis for healthcare, legal, lending, and insurance.</p>
-          <span class="inline-block px-3 py-1 bg-emerald-50 rounded-full text-xs font-medium text-emerald-700 border border-emerald-100">HIPAA Compliant</span>
+          <p class="text-sm text-[#64748B] mb-4">AI-powered document intelligence for healthcare, legal, lending, and insurance.</p>
+          <span class="inline-block px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-700 border border-emerald-100">HIPAA Compliant</span>
         </div>
         <div>
-          <h4 class="font-semibold text-slate-900 mb-4">Product</h4>
-          <ul class="space-y-2 text-sm text-slate-500">
-            <li><a href="#features" class="hover:text-slate-900">Features</a></li>
-            <li><a href="#modules" class="hover:text-slate-900">Modules</a></li>
-            <li><a href="#security" class="hover:text-slate-900">Security</a></li>
+          <h4 class="font-semibold text-[#0F172A] mb-4">Product</h4>
+          <ul class="space-y-2 text-sm text-[#64748B]">
+            <li><a href="#features" class="hover:text-[#0F172A]">Features</a></li>
+            <li><a href="#modules" class="hover:text-[#0F172A]">Modules</a></li>
+            <li><a href="#security" class="hover:text-[#0F172A]">Security</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-slate-900 mb-4">Company</h4>
-          <ul class="space-y-2 text-sm text-slate-500">
-            <li><a href="/contact.html" class="hover:text-slate-900">Contact</a></li>
+          <h4 class="font-semibold text-[#0F172A] mb-4">Company</h4>
+          <ul class="space-y-2 text-sm text-[#64748B]">
+            <li><a href="/contact.html" class="hover:text-[#0F172A]">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-slate-900 mb-4">Legal</h4>
-          <ul class="space-y-2 text-sm text-slate-500">
-            <li><a href="/privacy.html" class="hover:text-slate-900">Privacy Policy</a></li>
-            <li><a href="/terms.html" class="hover:text-slate-900">Terms of Service</a></li>
-            <li><a href="/baa.html" class="hover:text-slate-900">BAA</a></li>
-            <li><a href="/security.html" class="hover:text-slate-900">Security</a></li>
+          <h4 class="font-semibold text-[#0F172A] mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm text-[#64748B]">
+            <li><a href="/privacy.html" class="hover:text-[#0F172A]">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-[#0F172A]">Terms of Service</a></li>
+            <li><a href="/baa.html" class="hover:text-[#0F172A]">BAA</a></li>
+            <li><a href="/security.html" class="hover:text-[#0F172A]">Security</a></li>
           </ul>
         </div>
       </div>
-      <div class="pt-8 border-t border-slate-100 text-center">
-        <p class="text-sm text-slate-400">© 2026 DOKit. All rights reserved.</p>
+      <div class="pt-8 border-t border-[#E2E8F0] text-center">
+        <p class="text-sm text-[#64748B]">© 2026 DOKit. All rights reserved.</p>
       </div>
     </div>
   </footer>
