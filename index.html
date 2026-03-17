@@ -30,103 +30,121 @@
   </script>
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .gradient-orb {
-      background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.4) 0%, transparent 40%),
-                  radial-gradient(circle at 70% 50%, rgba(99, 102, 241, 0.4) 0%, transparent 40%),
-                  radial-gradient(circle at 50% 60%, rgba(59, 130, 246, 0.3) 0%, transparent 45%);
-      filter: blur(40px);
-      animation: float 8s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-20px) scale(1.05); }
-    }
   </style>
 </head>
 <body class="min-h-screen bg-[#F8FAFC] text-[#0F172A]">
 
-  <!-- Navigation - Dark Navy -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0F172A] border-b border-[#334155]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center">
-          <img src="/assets/dokit-logo-white.png" alt="DOKit" class="h-7">
-        </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#features" class="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
-          <a href="#modules" class="text-sm text-slate-400 hover:text-white transition-colors">Modules</a>
-          <a href="#security" class="text-sm text-slate-400 hover:text-white transition-colors">Security</a>
-          <a href="#contact" class="text-sm text-slate-400 hover:text-white transition-colors">Contact</a>
-        </div>
-        <div class="flex items-center gap-4">
-          <a href="#contact" class="px-5 py-2 bg-[#3B82F6] hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-all">
-            Get Started
+  <!-- Dark Hero Section with Nav -->
+  <section class="bg-[#0F172A] relative overflow-hidden">
+    <!-- Gradient Orbs -->
+    <div class="absolute top-20 left-1/4 w-96 h-96 bg-[#3B82F6]/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-[#6366F1]/20 rounded-full blur-3xl"></div>
+    
+    <!-- Navigation -->
+    <nav class="relative z-10 border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <a href="#" class="flex items-center">
+            <img src="/assets/dokit-logo-white.png" alt="DOKit" class="h-7">
           </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#features" class="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
+            <a href="#modules" class="text-sm text-slate-400 hover:text-white transition-colors">Modules</a>
+            <a href="#security" class="text-sm text-slate-400 hover:text-white transition-colors">Security</a>
+            <a href="#contact" class="text-sm text-slate-400 hover:text-white transition-colors">Contact</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="#contact" class="px-5 py-2 bg-[#3B82F6] hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-all">
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="relative pt-40 pb-20 overflow-hidden">
-    <!-- Gradient Orb -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px]">
-      <div class="gradient-orb w-full h-full rounded-full"></div>
+    </nav>
+    
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Text Content -->
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full mb-6">
+            <span class="w-2 h-2 bg-[#3B82F6] rounded-full animate-pulse"></span>
+            <span class="text-sm font-medium text-slate-300">GPT-4 Powered Extraction</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+            AI-powered document intelligence platform
+          </h1>
+          <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+            Extract, classify, and process any document in seconds. DOKit transforms unstructured data into actionable insights for healthcare, legal, and insurance organizations.
+          </p>
+          <div class="flex items-center gap-4 flex-wrap">
+            <a href="#contact" class="px-8 py-3.5 bg-[#3B82F6] hover:bg-blue-600 text-white font-medium rounded-lg transition-all shadow-lg shadow-blue-500/25">
+              Start Free Trial
+            </a>
+            <a href="#modules" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg border border-white/20 transition-all">
+              See How It Works
+            </a>
+          </div>
+          
+          <!-- Trust badges -->
+          <div class="flex items-center gap-6 mt-10 pt-8 border-t border-white/10">
+            <div class="flex items-center gap-2">
+              <svg width="20" height="20" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <span class="text-sm text-slate-400">HIPAA Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="20" height="20" class="text-[#3B82F6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span class="text-sm text-slate-400">99.2% Accuracy</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="20" height="20" class="text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-sm text-slate-400">&lt;5s Processing</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right: Dashboard Screenshot -->
+        <div class="relative hidden lg:block">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur-2xl scale-95"></div>
+          <div class="relative rounded-xl shadow-2xl overflow-hidden border border-white/10">
+            <img src="/dashboard-screenshot.png" alt="DOKit Dashboard" class="w-full h-auto" />
+          </div>
+        </div>
+      </div>
     </div>
     
-    <div class="relative max-w-4xl mx-auto px-6 text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full mb-6">
-        <span class="w-2 h-2 bg-[#3B82F6] rounded-full animate-pulse"></span>
-        <span class="text-sm font-medium text-[#3B82F6]">Now with GPT-4 Powered Extraction</span>
-      </div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] mb-6">
-        AI-powered document<br/>intelligence platform
-      </h1>
-      <p class="text-lg text-[#64748B] max-w-2xl mx-auto mb-8 leading-relaxed">
-        Extract, classify, and process any document in seconds. DOKit transforms unstructured data into actionable insights for healthcare, legal, and insurance organizations.
-      </p>
-      <div class="flex items-center justify-center gap-4 flex-wrap">
-        <a href="#contact" class="px-8 py-3.5 bg-[#3B82F6] hover:bg-blue-600 text-white font-medium rounded-lg transition-all shadow-lg shadow-blue-500/25">
-          Start Free Trial
-        </a>
-        <a href="#modules" class="px-8 py-3.5 bg-white hover:bg-slate-50 text-[#0F172A] font-medium rounded-lg border border-[#E2E8F0] transition-all">
-          See How It Works
-        </a>
+    <!-- Stats Bar -->
+    <div class="relative z-10 border-t border-white/10 mt-12">
+      <div class="max-w-6xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="text-3xl font-bold text-white mb-1">99.2%</div>
+            <div class="text-sm text-slate-500">Extraction Accuracy</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white mb-1">&lt;5s</div>
+            <div class="text-sm text-slate-500">Avg Processing Time</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white mb-1">2M+</div>
+            <div class="text-sm text-slate-500">Documents Processed</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-white mb-1">99.9%</div>
+            <div class="text-sm text-slate-500">Uptime SLA</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Dashboard Preview -->
-  <section class="pb-20 pt-8 hidden md:block">
-    <div class="max-w-5xl mx-auto px-6">
+  <!-- Mobile Dashboard Preview -->
+  <section class="py-12 lg:hidden">
+    <div class="max-w-xl mx-auto px-6">
       <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-blue-500/10 rounded-2xl blur-2xl scale-95"></div>
-        <div class="relative rounded-xl shadow-2xl shadow-slate-900/10 overflow-hidden border border-[#E2E8F0]">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl blur-2xl scale-95"></div>
+        <div class="relative rounded-xl shadow-2xl overflow-hidden border border-[#E2E8F0]">
           <img src="/dashboard-screenshot.png" alt="DOKit Dashboard" class="w-full h-auto" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Bar -->
-  <section class="py-12 bg-[#0F172A]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">99.2%</div>
-          <div class="text-sm text-slate-400">Extraction Accuracy</div>
-        </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">&lt;5s</div>
-          <div class="text-sm text-slate-400">Avg Processing Time</div>
-        </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">2M+</div>
-          <div class="text-sm text-slate-400">Documents Processed</div>
-        </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-white mb-1">99.9%</div>
-          <div class="text-sm text-slate-400">Uptime SLA</div>
         </div>
       </div>
     </div>
