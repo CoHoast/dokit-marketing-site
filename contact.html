@@ -9,164 +9,229 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            accent: {
+              blue: '#3B82F6',
+              indigo: '#6366F1',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900">
+<body class="min-h-screen bg-[#F8FAFC] text-[#0F172A]">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur-xl border-b border-slate-100/50">
+  <nav class="bg-[#0F172A] border-b border-white/10">
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-center justify-between h-16">
         <a href="/" class="flex items-center">
-          <img src="/assets/dokit-logo.png" alt="DOKit" class="h-8">
+          <img src="/assets/dokit-logo-white.png" alt="DOKit" class="h-7">
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="#features" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Features</a>
-          <a href="#modules" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Modules</a>
-          <a href="#pricing" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Pricing</a>
-          <a href="/security.html" class="text-sm text-slate-500 hover:text-slate-900 transition-colors">Security</a>
+          <a href="/#features" class="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
+          <a href="/#modules" class="text-sm text-slate-400 hover:text-white transition-colors">Modules</a>
+          <a href="/#security" class="text-sm text-slate-400 hover:text-white transition-colors">Security</a>
+          <a href="/contact.html" class="text-sm text-white transition-colors">Contact</a>
         </div>
         <div class="flex items-center gap-4">
-          <a href="/coming-soon.html" class="text-sm text-slate-600 hover:text-slate-900">Sign In</a>
-          <a href="/contact.html" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium rounded-full transition-all">Get Started</a>
+          <a href="/contact.html" class="px-5 py-2 bg-[#3B82F6] hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-all">
+            Get Started
+          </a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="pt-32 pb-16">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 mb-6">
-        Get in Touch
+  <section class="bg-[#0F172A] relative overflow-hidden py-20">
+    <div class="absolute top-20 left-1/4 w-96 h-96 bg-[#3B82F6]/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-[#6366F1]/20 rounded-full blur-3xl"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+        Let's talk
       </h1>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-        Ready to transform your document workflows? Have questions about DOKit? We'd love to hear from you.
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+        Ready to transform your document workflows? Get in touch with our team to schedule a demo or discuss your needs.
       </p>
     </div>
   </section>
 
-  <!-- Contact Form + Info -->
-  <section class="pb-24">
-    <div class="max-w-5xl mx-auto px-6">
+  <!-- Contact Content -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12">
         
         <!-- Contact Form -->
-        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-          <h2 class="text-xl font-semibold text-slate-900 mb-6">Send us a message</h2>
-          <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-5">
-            <div>
-              <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
-              <input type="text" id="name" name="name" required 
-                class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-                placeholder="John Smith">
+        <div class="bg-white rounded-2xl p-8 border border-[#E2E8F0] shadow-sm">
+          <h2 class="text-2xl font-bold text-[#0F172A] mb-6">Send us a message</h2>
+          <form action="https://formspree.io/f/hello@dokit.ai" method="POST" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-[#0F172A] mb-2">First Name</label>
+                <input type="text" id="firstName" name="firstName" required
+                  class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all">
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-[#0F172A] mb-2">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required
+                  class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all">
+              </div>
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Work Email</label>
-              <input type="email" id="email" name="email" required 
-                class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-                placeholder="john@company.com">
+              <label for="email" class="block text-sm font-medium text-[#0F172A] mb-2">Work Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all">
             </div>
             <div>
-              <label for="company" class="block text-sm font-medium text-slate-700 mb-2">Company</label>
-              <input type="text" id="company" name="company" 
-                class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-                placeholder="Acme Healthcare">
+              <label for="company" class="block text-sm font-medium text-[#0F172A] mb-2">Company</label>
+              <input type="text" id="company" name="company"
+                class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all">
             </div>
             <div>
-              <label for="interest" class="block text-sm font-medium text-slate-700 mb-2">I'm interested in...</label>
-              <select id="interest" name="interest" 
-                class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+              <label for="interest" class="block text-sm font-medium text-[#0F172A] mb-2">I'm interested in...</label>
+              <select id="interest" name="interest"
+                class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all bg-white">
+                <option value="">Select an option</option>
                 <option value="demo">Scheduling a demo</option>
                 <option value="pricing">Pricing information</option>
-                <option value="enterprise">Enterprise / White-label</option>
-                <option value="support">Technical support</option>
+                <option value="healthcare">Healthcare solutions</option>
+                <option value="insurance">Insurance solutions</option>
+                <option value="legal">Legal solutions</option>
+                <option value="integration">Integration & API</option>
                 <option value="other">Something else</option>
               </select>
             </div>
             <div>
-              <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message</label>
-              <textarea id="message" name="message" rows="4" 
-                class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+              <label for="message" class="block text-sm font-medium text-[#0F172A] mb-2">Message</label>
+              <textarea id="message" name="message" rows="4"
+                class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/20 outline-none transition-all resize-none"
                 placeholder="Tell us about your document processing needs..."></textarea>
             </div>
-            <button type="submit" 
-              class="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-full transition-all shadow-lg shadow-slate-900/20">
+            <button type="submit"
+              class="w-full px-8 py-4 bg-[#3B82F6] hover:bg-blue-600 text-white font-medium rounded-lg transition-all shadow-lg shadow-blue-500/25">
               Send Message
             </button>
           </form>
         </div>
-
+        
         <!-- Contact Info -->
         <div class="space-y-8">
           <div>
-            <h2 class="text-xl font-semibold text-slate-900 mb-6">Other ways to reach us</h2>
+            <h2 class="text-2xl font-bold text-[#0F172A] mb-6">Get in touch</h2>
+            <p class="text-[#64748B] mb-8">
+              Have questions about DOKit? Our team is here to help. Reach out via the form or contact us directly.
+            </p>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="24" height="24" class="text-[#3B82F6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-[#0F172A] mb-1">Email</h3>
+                <a href="mailto:hello@dokit.ai" class="text-[#3B82F6] hover:underline">hello@dokit.ai</a>
+              </div>
+            </div>
             
-            <div class="space-y-6">
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg width="24" height="24" class="text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-medium text-slate-900">Email</h3>
-                  <p class="text-slate-600">hello@dokit.ai</p>
-                  <p class="text-sm text-slate-500 mt-1">We typically respond within 24 hours</p>
-                </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="24" height="24" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
               </div>
-
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg width="24" height="24" class="text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-medium text-slate-900">Enterprise & BAA Requests</h3>
-                  <p class="text-slate-600">enterprise@dokit.ai</p>
-                  <p class="text-sm text-slate-500 mt-1">For white-label, custom deployments, and BAA signing</p>
-                </div>
+              <div>
+                <h3 class="font-semibold text-[#0F172A] mb-1">Security & Compliance</h3>
+                <a href="mailto:security@dokit.ai" class="text-[#3B82F6] hover:underline">security@dokit.ai</a>
               </div>
-
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg width="24" height="24" class="text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-medium text-slate-900">Technical Support</h3>
-                  <p class="text-slate-600">support@dokit.ai</p>
-                  <p class="text-sm text-slate-500 mt-1">For existing customers</p>
-                </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg width="24" height="24" class="text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-[#0F172A] mb-1">Technical Support</h3>
+                <a href="mailto:support@dokit.ai" class="text-[#3B82F6] hover:underline">support@dokit.ai</a>
               </div>
             </div>
           </div>
-
-          <!-- FAQ Teaser -->
-          <div class="bg-slate-50 rounded-2xl p-6">
-            <h3 class="font-medium text-slate-900 mb-3">Frequently Asked</h3>
-            <ul class="space-y-2 text-sm text-slate-600">
-              <li>• Do you offer a free trial? <span class="text-slate-900 font-medium">Yes, 14 days.</span></li>
-              <li>• Is DOKit HIPAA compliant? <span class="text-slate-900 font-medium">Yes, with signed BAA.</span></li>
-              <li>• How long is implementation? <span class="text-slate-900 font-medium">Same day for standard plans.</span></li>
-              <li>• Do you offer white-label? <span class="text-slate-900 font-medium">Yes, on Enterprise plans.</span></li>
-            </ul>
+          
+          <!-- Trust Card -->
+          <div class="bg-[#0F172A] rounded-2xl p-6 mt-8">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
+                <svg width="20" height="20" class="text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <span class="text-white font-semibold">Enterprise Ready</span>
+            </div>
+            <p class="text-slate-400 text-sm">
+              DOKit is HIPAA compliant and SOC 2 Type II ready. We sign BAAs and offer dedicated support for enterprise customers.
+            </p>
           </div>
         </div>
-
+        
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-50 border-t border-slate-100 py-12">
+  <footer class="py-16 border-t border-[#E2E8F0] bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-center justify-center">
-        <p class="text-sm text-slate-400">© 2026 DOKit. All rights reserved.</p>
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="/assets/dokit-logo-dark.png" alt="DOKit" class="h-7">
+          </div>
+          <p class="text-sm text-[#64748B] mb-4">AI-powered document intelligence for healthcare, legal, lending, and insurance.</p>
+          <span class="inline-block px-3 py-1 bg-emerald-50 rounded-lg text-xs font-medium text-emerald-700 border border-emerald-100">HIPAA Compliant</span>
+        </div>
+        <div>
+          <h4 class="font-semibold text-[#0F172A] mb-4">Product</h4>
+          <ul class="space-y-2 text-sm text-[#64748B]">
+            <li><a href="/#features" class="hover:text-[#0F172A]">Features</a></li>
+            <li><a href="/#modules" class="hover:text-[#0F172A]">Modules</a></li>
+            <li><a href="/#security" class="hover:text-[#0F172A]">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-[#0F172A] mb-4">Company</h4>
+          <ul class="space-y-2 text-sm text-[#64748B]">
+            <li><a href="/contact.html" class="hover:text-[#0F172A]">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-[#0F172A] mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm text-[#64748B]">
+            <li><a href="/privacy.html" class="hover:text-[#0F172A]">Privacy Policy</a></li>
+            <li><a href="/terms.html" class="hover:text-[#0F172A]">Terms of Service</a></li>
+            <li><a href="/baa.html" class="hover:text-[#0F172A]">BAA</a></li>
+            <li><a href="/security.html" class="hover:text-[#0F172A]">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-[#E2E8F0] text-center">
+        <p class="text-sm text-[#64748B]">© 2026 DOKit. All rights reserved.</p>
       </div>
     </div>
   </footer>
